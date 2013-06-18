@@ -1,8 +1,5 @@
 import pygame
 import os
-import sys
-import random
-import time
 from pygame.locals import *
 
 from food import *

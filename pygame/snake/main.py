@@ -1,5 +1,5 @@
 # Autor: Anderson Hiroshi Hamamoto
-# Snake 
+# Snake
 
 # a implementar
 # (DONE) - conforme o jogador vai pegando mais speed, brota mais de uma comida por vez
@@ -9,13 +9,6 @@
 # - colocar pra cobra atravessar para o outro lado da tela
 # (DONE) - colocar o score na tela ou apos o jogador morrer
 # (FAIL) - colocar uma borda no jogo
-
-import pygame
-import os
-import sys
-import random
-import time
-from pygame.locals import *
 
 from game import *
 

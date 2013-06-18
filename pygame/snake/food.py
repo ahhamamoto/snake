@@ -1,19 +1,16 @@
 import pygame
-import os
-import sys
 import random
-import time
 from pygame.locals import *
 
 SCREEN_DIMENSION = 800, 640
 
 COLORS = {
-		'black': (0, 0, 0),
-		'white': (255, 255, 255),
-		'red': (255, 0, 0),
-		'green': (0, 255, 0),
-		'blue': (0, 0, 255),
-		'gray': (84, 84, 84)
+    'black': (0, 0, 0),
+    'white': (255, 255, 255),
+    'red': (255, 0, 0),
+    'green': (0, 255, 0),
+    'blue': (0, 0, 255),
+    'gray': (84, 84, 84)
 }
 
 class Food():

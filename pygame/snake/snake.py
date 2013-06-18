@@ -1,5 +1,5 @@
 # Autor: Anderson Hiroshi Hamamoto
-# Snake 
+# Snake
 
 # a implementar
 # (DONE) - conforme o jogador vai pegando mais speed, brota mais de uma comida por vez
@@ -11,10 +11,6 @@
 # (FAIL) - colocar uma borda no jogo
 
 import pygame
-import os
-import sys
-import random
-import time
 from pygame.locals import *
 
 SCREEN_DIMENSION = 800, 640
@@ -29,7 +25,7 @@ COLORS = {
 }
 
 class Snake():
-	
+
 	def __init__(self, direction=90, color=(0, 255, 0), size=16, x=416, y=336, width=960, height=640, length=3):
 		self.count = 0
 		self.food_number = 1
