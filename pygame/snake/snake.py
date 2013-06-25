@@ -11,6 +11,7 @@
 # (FAIL) - colocar uma borda no jogo
 
 import pygame
+import sys
 from pygame.locals import *
 
 SCREEN_DIMENSION = 800, 640
