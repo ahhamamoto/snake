@@ -1,6 +1,4 @@
-import pygame
 import random
-from pygame.locals import *
 
 SCREEN_DIMENSION = 800, 640
 
@@ -14,23 +12,37 @@ COLORS = {
 }
 
 class Food():
-	def __init__(self, color=(255, 225, 255), size=16, width=960, height=640):
-		self.color = color
-		self.size = size
-		self.eaten = False
-		self.calculate_position()
+    """Classe da comida que nasce no jogo."""
 
-	# desenha comida na tela
-	def draw(self, surf):
-		surf.fill(self.color, (self.x, self.y, self.size, self.size))
+    def __init__(self, color=(255, 225, 255), size=16, width=800, height=640):
+        """Construtor, inicia valores de dimensao da janela,
+        cor e se foi comido."""
+        self.window_width = width
+        self.window_height = height
+        self.color = color
+        self.size = size
+        self.eaten = False
+        self.calculate_position()
+        self.position_x = None
+        self.position_y = None
 
-	def grow(self):
-		self.calculate_position()
-		self.eaten = False
+    # desenha comida na tela
+    def draw(self, surf):
+        """Renderiza a comida na janela."""
+        surf.fill(self.color, (self.position_x,
+                               self.position_y, self.size, self.size))
 
-	def calculate_position(self):
-		self.x = random.randrange(0, SCREEN_DIMENSION[0] / self.size) * 16
-		self.y = random.randrange(0, SCREEN_DIMENSION[1] / self.size) * 16
+    def grow(self):
+        """Metodo que faz a comida nascer de novo se for comida."""
+        self.calculate_position()
+        self.eaten = False
 
-		if self.y < 32:
-			self.y += 32
+    def calculate_position(self):
+        """Calcula a proxima posicao da comida."""
+        self.position_x = random.randrange(0,
+                                           self.window_width / self.size) * 16
+        self.position_y = random.randrange(0,
+                                           self.window_height / self.size) * 16
+
+        if self.position_y < 32:
+            self.position_y += 32
